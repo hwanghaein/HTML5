@@ -33,13 +33,8 @@ margin: 0 auto;
 .main{
   background: lightgreen;
   height: 50vh;
-  display: flow-root;
-  padding: 0 15px;
-}
-
-.group {
-  margin: 0 15px;
-  float: left;
+  display: flex;
+  flex-direction: row;
 }
 
 .group1{
@@ -50,12 +45,11 @@ margin: 0 auto;
 .group2{
   background-color: salmon;
   width: 380px;
-  
 }
+
 .group3{
   background-color: gold;
   width: 190px;
-  
 }
 
 /* 슬로건 */
@@ -63,10 +57,12 @@ margin: 0 auto;
   background: skyblue;
   height: 10vh;
 }
+
 /* 푸터 */
 .footer{
   background: gray;
 }
+
 .footer-inner{
   background: lightgray;
   height: 15vh;
