@@ -23,15 +23,16 @@ html {
   font-size: 10px;
 }
 
+
 /* 링크 스타일 */
 a {
   color: inherit;
   text-decoration: none;
 }
 
+
 /* 본문 스타일 */
 body {
-  /* em, rem 단위를 사용해보기 */
   font-size: 1.4rem;
   color: #212121;
   background: #ccc
@@ -41,6 +42,7 @@ body {
     "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
+
 
 /* 레이아웃 */
 .header,
@@ -52,6 +54,7 @@ body {
   margin: 0 auto;
 }
 
+
 /* 헤더 */
 .header {
   background: #fff;
@@ -60,7 +63,8 @@ body {
   position: relative;
 }
 
-/* 로고 */
+
+/* 로고 (Web Cafe) */
 .logo {
   position: absolute;
   top: 45px;
@@ -68,41 +72,38 @@ body {
   z-index: 1;
 }
 
+
 /* 텍스트 링크 모음 */
 .member {
   text-align: right;
   padding: 4px 0;
-  /* position 속성을 활용하여 .member 영역을 오른쪽으로 10px 만큼 이동하기 */
-  /* position: relative;
-  right: -10px; */
-  /* transform 속성을 활용하여 .member 영역을 오른쪽으로 10px 만큼 이동하기 */
   transform: translateX(10px);
 }
 
+/* 텍스트 링크 모음 (리스트 아이템 부분) */
 .member li {
   display: inline-block;
 }
 
+/* 텍스트 링크 모음 (하이퍼링크 부분)  */
 .member a {
   padding: 6px 10px;
   display: inherit;
   text-transform: uppercase;
 }
 
-/* 마지막 li 요소에 포함된 a 요소를 선택하여 오른쪽 padding 값을 0으로 재정의 하는 방법 */
-/* .member li:last-child a {
-  padding-right: 0;
-} */
-
+/* 로그인, 회원가입, 사이트맵, english */
 .divider {
   margin-right: 4px;
 }
 
-/* 메인 메뉴 */
+
+/* 메인 메뉴 (navigation 클래스) */
 .navigation {
-  padding-bottom: 80px;
+  padding-bottom: 40px;
 }
 
+/* 메인메뉴 (menu 클래스) */
 .menu {
   border-top: 2px solid currentColor;
   background: #e85e2c
@@ -119,16 +120,15 @@ body {
   position: relative;
 }
 
-.menu > li:nth-child(-n + 3) {
-  position: relative;
-}
 
+
+/* 메인메뉴 아이템 (menu-item 클래스)*/
 .menu-item {
   float: left;
   border-left: 2px solid #fff;
 }
 
-/* 구체성 -> 10점 */
+/* 메인메뉴 버튼 (menu-button 클래스) */
 .menu-button {
   border: 0;
   background: transparent;
@@ -140,46 +140,57 @@ body {
   text-shadow: 1px 1px 0 #000, -1px -1px 0 #000;
 }
 
-/* 구체성 -> 20점 */
+/* 메인메뉴 버튼 마우스 대면 노란색으로 바뀌게하기 */
 .is-active .menu-button {
   color: #ff0;
 }
 
+/* 메인메뉴 버튼 밑에 검은색 밑줄 생기게 하기 */
 .is-active .menu-button::after {
   content: "";
   display: block;
   border-top: 2px solid #000;
 }
 
+/* 서브메뉴 (sub-menu 클래스) */
 .sub-menu {
-  background-color: pink;
   position: absolute;
   top: 47px;
+  padding: 4px 0;
   display: none;
 }
 
+/* 메인메뉴 버튼 앞 3개의 앞부분 기준으로 서브메뉴들이 배치되게끔 */
+.menu > li:nth-child(-n + 3) {
+  position: relative;
+}
+
+/* 서브메뉴 앞 3개는 왼쪽 기준으로 배열 */
 .menu-html,
 .menu-css,
 .menu-standards {
   left: 0;
 }
 
+/* 서브메뉴 뒤 3개는 오른쪽 기준으로 배열 */
 .menu-accessibility,
 .menu-qna,
 .menu-archive {
   right: 0;
 }
 
+/* 서브메뉴들을 가로로 줄바꿈 안되게끔 배열하기 */
 .is-active .sub-menu {
   display: block;
   white-space: nowrap;
 }
 
+/* 서브메뉴 개별 list item 부분을 인라인블록으로 바꿔주기 */
 .sub-menu li {
   display: inline-block;
-  background-color: gold;
 }
 
+/* 서브메뉴 개별 하이퍼링크 부분 앞쪽에 아이콘 추가 */
 .sub-menu a::before{
   content: '\e804';
   font-family: 'fontello';
@@ -198,15 +209,58 @@ body {
 
 }
 
-.sub-menu a:hover::before{
+/* 서브메뉴 개별 하이퍼링크에 마우스 대면 다른 아이콘으로 바뀌게 */
+.sub-menu a:hover::before,
+.sub-menu a:focus::before{
   content: '\e800';
 }
 
-/* 비주얼 */
-.visual {
-  background: orange;
-  height: 10vh;
+
+/* 서브메뉴 개별 하이퍼링크를 인라인블록으로 바꾸고 박스 크기 설정하기 */
+.sub-menu a{
+  display: inline-block;
+  padding: 6px 0;
 }
+
+/* 서브메뉴 개별 하이퍼링크에 마우스 대면 빨간색으로 바뀌게 */
+.sub-menu a:hover,.sub-menu a:focus {
+  color: #f00;
+}
+
+/* 비주얼 부분 텍스트(Web Standards & Accessibility) 움직이는 애니메이션 만들기 */
+
+@keyframes moveEffect {
+0% {
+  font-size: 12px;
+  color:rgba(0,0,0,0);
+ transform: translate(0,0);
+}
+100% {
+  font-size: 24px;
+  color: rgba(0,0,0,1);
+  transform: translate(400px,75px);
+}
+}
+
+/* 비주얼 전체 배경 부분 */
+.visual {
+  background: pink;
+  height: 120px;
+  position: relative;
+}
+
+/* 비주얼 부분 텍스트(Web Standards & Accessibility) 글꼴과 애니메이션 효과 추가*/
+.visual-text {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+ background-color: coral;
+ animation-name: moveEffect;
+ animation-duration: 2000ms;
+ animation-fill-mode: forwards;
+ display: inline-block;
+}
+
+
+
 /* 메인 */
 .main {
   background: lightgreen;
