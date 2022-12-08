@@ -263,10 +263,7 @@ width: 100%;
 height: 100%;
 top: 0;
 left: 0;
-animation-name: fadeEffect;
-animation-duration: 2000ms;
-animation-iteration-count: infinite;
-animation-direction: alternate;
+animation: fadeEffect 2000ms infinite alternate;
 }
 
 /* 1,3번 꽃 이미지 */
@@ -285,11 +282,9 @@ url("./images/ani_flower_02.png") no-repeat 600px 0;
 /* 비주얼 부분 텍스트(Web Standards & Accessibility) 글꼴과 애니메이션 효과 추가*/
 .visual-text {
   font-family: Georgia, 'Times New Roman', Times, serif;
- animation-name: moveEffect;
- animation-duration: 1000ms;
- animation-fill-mode: forwards;
- animation-timing-function: ease-in-out;
- display: inline-block;
+  animation: moveEffect 400ms ease-in-out forwards;
+  position: relative;
+  z-index: 1;
 }
 
 
