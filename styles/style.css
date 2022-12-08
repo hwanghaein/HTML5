@@ -33,15 +33,16 @@ a {
 
 /* 본문 스타일 */
 body {
-  font-size: 1.4rem;
-  color: #212121;
-  background: #ccc
-    linear-gradient(to bottom, #ccc 0%, #eee 35%, #fff 70%, #fff 100%);
-  font-family: "Pretendard Variable", Pretendard, -apple-system,
-    BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
-    "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-}
+    color: #212121;
+    font-size: 1.4rem;
+    font-family: "Pretendard Variable", Pretendard, -apple-system,
+      BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
+      "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
+      "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    background: url("./images/bg_flower.png") no-repeat 50% 0,
+      #ccc linear-gradient(to bottom, #ccc 0%, #eee 35%, #fff 70%, #fff 100%)
+        repeat 0 0;
+  }
 
 
 /* 레이아웃 */
@@ -242,20 +243,52 @@ body {
 }
 }
 
+@keyframes fadeEffect{
+  0%{ opacity: 1;}
+  100%{ opacity: 0;}
+}
+
 /* 비주얼 전체 배경 부분 */
 .visual {
-  background: pink;
   height: 120px;
   position: relative;
+}
+
+/* 1,2,3,4번 배경 꽃 이미지 */
+.visual::before,
+.visual::after {
+content:"";
+position: absolute;
+width: 100%;
+height: 100%;
+top: 0;
+left: 0;
+animation-name: fadeEffect;
+animation-duration: 2000ms;
+animation-iteration-count: infinite;
+animation-direction: alternate;
+}
+
+/* 1,3번 꽃 이미지 */
+.visual::before {
+background: url("./images/ani_flower_01.png") no-repeat 0 -10px,
+url("./images/ani_flower_02.png") no-repeat 600px 0;
+}
+
+/* 2,4번 꽃 이미지 */
+.visual::after {
+  background: url("./images/ani_flower_03.png") no-repeat 300px 0,
+  url("./images/ani_flower_04.png") no-repeat 800px 0;
+  animation-delay: 1000ms;
 }
 
 /* 비주얼 부분 텍스트(Web Standards & Accessibility) 글꼴과 애니메이션 효과 추가*/
 .visual-text {
   font-family: Georgia, 'Times New Roman', Times, serif;
- background-color: coral;
  animation-name: moveEffect;
- animation-duration: 2000ms;
+ animation-duration: 1000ms;
  animation-fill-mode: forwards;
+ animation-timing-function: ease-in-out;
  display: inline-block;
 }
 
