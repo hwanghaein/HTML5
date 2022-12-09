@@ -4,7 +4,7 @@
 
 
 /* 숨김 콘텐츠 */
-.a11y-hidden {
+.a11y-hidden, legend {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -33,15 +33,15 @@ a {
 
 /* 본문 스타일 */
 body {
-    color: #212121;
-    font-size: 1.4rem;
-    font-family: "Pretendard Variable", Pretendard, -apple-system,
-      BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
-      "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
-      "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-    background: url("./images/bg_flower.png") no-repeat 50% 0,
-      #ccc linear-gradient(to bottom, #ccc 0%, #eee 35%, #fff 70%, #fff 100%)
-        repeat 0 0;
+  color: #212121;
+  font-size: 1.4rem;
+  font-family: "Pretendard Variable", Pretendard, -apple-system,
+               BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
+              "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
+               "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  background: url("./images/bg_flower.png") no-repeat 50% 0,
+             #ccc linear-gradient(to bottom, #ccc 0%, #eee 35%, #fff 70%, #fff 100%)
+             repeat 0 0;
   }
 
 
@@ -234,7 +234,7 @@ body {
 0% {
   font-size: 12px;
   color:rgba(0,0,0,0);
- transform: translate(0,0);
+  transform: translate(0,0);
 }
 100% {
   font-size: 24px;
@@ -291,10 +291,11 @@ url("./images/ani_flower_02.png") no-repeat 600px 0;
 
 /* 메인 */
 .main {
-  background: lightgreen;
-  height: 50vh;
   display: flow-root;
-  padding: 0 15px;
+  background: #fff;
+  min-height: 450px;
+  padding: 30px 15px;
+  border-radius: 15px 15px 0 0;
 }
 
 .group {
@@ -303,7 +304,6 @@ url("./images/ani_flower_02.png") no-repeat 600px 0;
 }
 
 .group1 {
-  background-color: violet;
   width: 250px;
 }
 .group2 {
@@ -313,6 +313,133 @@ url("./images/ani_flower_02.png") no-repeat 600px 0;
 .group3 {
   background-color: gold;
   width: 190px;
+}
+
+/* 로그인 전체 영역 주황색 영역 */
+.login{
+  box-shadow:5px 5px 0 0 #ccc;
+  background: orange radial-gradient(circle at right top, orange, orangered);
+  padding: 10px;
+  border-radius: 5px;
+  
+}
+
+/* 로그인 타이틀 노란 글자 */
+.login-title{
+  color: #ff0;
+  font-size: 15px;
+  font-weight: 700;
+  text-indent: 10px;
+}
+
+/* 로그인 하얀 배경 폼 부분 */
+.login-form{
+  background-color: #fff;
+  margin-top: 10px;
+  border-radius: 5px 5px 0 0;
+  padding: 10px 10px 0 10px;
+}
+
+/* 아디, 비번 2줄 합친 부분 */
+.user-email,
+.user-pw{
+margin-bottom: 5px;
+}
+
+
+/* 필드셋 (아디+비번+버튼 합친 네모난 영역) */
+.login-form fieldset{
+position:relative;
+border-bottom: 1px solid #aaa;
+padding-bottom: 5px;
+}
+
+
+/* 아디,비번 라벨 부분 */
+.login-form label{
+display: inline-block;
+width: 4em;
+}
+
+
+/* 아디,비번 입력창 부분 */
+.login-form input{
+  width: 90px;
+  height: 24px;
+  border: 1px solid #aaa;
+  padding: 1px 1px 1px 5px;
+  border-radius: 3px;
+}
+
+/* 로그인 주황 버튼 부분 */
+.login-button{
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 53px;
+  background-color: orangered;
+  color:#fff;
+  border: 0;
+  padding: 0 8px;
+  border-radius: 5px;
+  font-size: 13px;
+}
+
+
+
+/* sign 영역 흰색 부분 */
+.sign{
+  background-color: #fff;
+  border-radius: 0 0 5px 5px;
+  padding: 4px 10px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+/* 회원가입+아이디비번찾기 각 a태그 */
+.sign a{
+  display: block;
+  padding: 6px 0;
+  letter-spacing: -1px;
+}
+
+/* 회원가입+아이디비번찾기 앞에 돋보기 아이콘 추가 */
+.sign a::before{
+  content: '\e805';
+  font-family: 'fontello';
+  margin-right: 8px;
+  color: orangered;
+}
+
+
+/* 유효성 검사 배너 영역*/
+.validation-list{
+background: #fff;
+margin-top: 25px;
+}
+
+
+/* 유효성 검사 배너 list 2개 (W3C,CSS) */
+.validation-list li{
+  margin-top: 10px;
+}
+
+/* 유효성 검사 배너 list 2개 각 a태그 */
+.validation-list li a{
+  display: block;
+  background: url("./images/validation_icon.png") no-repeat 25px 50%,
+  #ccc linear-gradient(to bottom, #ccc, #eee);
+  padding: 8px 15px 8px 55px;
+  border-radius: 30px;
+  border: 1px solid #aaa;
+  cursor: pointer;
+}
+
+/* 유효성 검사 배너 list 마우스 대면 빨간색으로 */
+.validation-list a:hover, 
+.validation-list a:focus{
+color:#f00
 }
 
 /* 슬로건 */
