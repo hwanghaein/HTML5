@@ -532,7 +532,6 @@ line-height: 1.5;
 
 /* "자료검색" */
 .form-group-label{
-  /* white-space: nowrap; */
   flex-shrink: 0;
   margin-right: 10px;
 }
