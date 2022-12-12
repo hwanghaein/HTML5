@@ -307,7 +307,6 @@ url("./images/ani_flower_02.png") no-repeat 600px 0;
   width: 250px;
 }
 .group2 {
-  background-color: salmon;
   width: 380px;
 }
 .group3 {
@@ -442,12 +441,216 @@ margin-top: 25px;
 color:#f00
 }
 
+/* 웹관련용어 영역 회색부분 */
+.term{
+  margin-top: 20px;
+  border:1px solid #aaa;
+  border-radius: 5px;
+  padding: 10px 15px;
+  background:#ccc linear-gradient(to bottom, #ccc, #eee);
+}
+
+/* "웹관련용어" 글자 */
+.term-title{
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/* 웹관련 용어 제목 밑에 내용 부분 */
+.term-list {
+  margin-top: 10px;
+}
+
+/* 내용 덩어리 2개 */
+.term-list div{
+  margin-top: 10px;
+  display: flow-root;
+}
+
+/* 내용 안에 "웹표준이란?"이랑 요약내용부분 */
+.term-list-subject, .term-list-brief{
+  float: right;
+  width: 145px;
+}
+
+/* "웹표준이란?" 글자 */
+.term-list-subject{
+ color: #296897;
+ font-weight: 500;
+}
+
+/* W3C 썸네일 이미지 왼쪽으로가게 */
+.term-list-thumbnail{
+  float: left;
+}
+
+/* W3C 썸네일 이미지 중간 배열 */
+.term-list-thumbnail img{
+  vertical-align: middle;
+}
+
+/* 요약내용부분 */
+.term-list-brief{
+margin-top: 5px;
+line-height: 1.5;
+}
+
+/* 내용 덩어리 2개중에 밑에꺼중에 제목이랑 요약내용 */
+.cross .term-list-subject,
+.cross .term-list-brief{
+  float: left;
+}
+
+/* 내용 덩어리 2개중에 밑에꺼중에 썸네일 이미지 */
+.cross .term-list-thumbnail{
+  float: right;
+}
+
+
+/* 검색 폼 영역 회색부분*/
+.search-form{
+  background:#ccc linear-gradient(to bottom, #ccc, #eee);
+  border:1px solid #aaa;
+  border-radius: 15px 15px 0 0;
+  padding: 15px 25px 10px;
+}
+
+/*자료검색부터 검색버튼까지 전체영역*/
+.search-form-inner{
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+/*자료검색부터 검색버튼 '전'까지 영역*/
+.form-group{
+ flex-grow: 1;
+ display: flex;
+ flex-flow: row nowrap;
+ align-items: center;
+ padding-right: 10px;
+}
+
+/* "자료검색" */
+.form-group-label{
+  /* white-space: nowrap; */
+  flex-shrink: 0;
+  margin-right: 10px;
+}
+
+/* 검색창 입력 부분 */
+.form-group-input{
+ border: 1px solid #aaa;
+ border-radius: 3px;
+ height: 24px;
+ padding: 1px 1px 1px 5px;
+ flex-grow: 1;
+ min-width: 0;
+ width: 100%;
+ font-size: 1.2rem;
+}
+
+/* 검색버튼 */
+.search-button{
+  flex-shrink: 0;
+  background-color: #000;
+  color:#fff;
+  height: 24px;
+  border: 0;
+  border-radius: 3px;
+  padding: 0 10px;
+  font-size: 12px; 
+}
+
+/* "공지사항+자료실+내용리스트+더보기" 전부 영역 */
+.board{
+  background-color: yellow;
+  margin-top: 20px;
+  position: relative;
+}
+
+/* 공지사항탭+자료실탭  */
+.tab-list{
+  background-color: lime;
+  display: flex;
+  flex-flow: row nowrap;
+  }
+
+  /* 자료실 탭 버튼 (선택 안된 일반 상태 ⇒회색바탕에 회색글자) */
+  .tab{
+    border: 1px solid #aaa;
+    background-color: #ccc;
+    border-radius: 5px 5px 0 0;
+    padding: 5px 10px;
+    color: #666;
+  }
+
+  /* 공지사항 탭 버튼 (선택된 상태로 만들기 ⇒흰색바탕에 주황글자)*/
+  .is-select.tab {
+    background-color: #fff;
+    color: #e85e2c;
+    border-color: currentColor currentColor #fff currentColor;
+  }
+
+
+  /* 내용리스트들+시간 다 합친 박스영역 */
+.tab-panel{
+  background-color: pink;
+  display: none;
+ margin-top: 15px;
+}
+
+/* 공지사항 탭 선택하면 나오는 것들 (공지사항 내용리스트+더보기) */
+.is-select.tab-panel {
+  display: block;
+}
+
+
+/* 밑에 각각 리스트들 (내용+시간)*/
+.board-list li{
+background-color: slateblue;
+margin-top: 10px;
+display: flex;
+flex-flow: row nowrap;
+justify-content: space-between;
+}
+
+/* 밑에 각각 리스트들의 a태그 (선택되는 부분) */
+.board-list a{
+  background-color: salmon;
+  flex-grow: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 리스트들 오른쪽 날짜 */
+.board-list time{
+flex-shrink: 0;
+margin-left: 10px;
+}
+
+/* (공지사항+자료실) 더보기 */
+.board-more {
+background-color: violet;
+position: absolute;
+top: -8px;
+right: -8px;
+padding: 8px;
+}
+
+/* 더보기 앞에 플러스 아이콘 */
+.icon-plus::before{
+  color: darkgreen;
+}
+
+
 /* 슬로건 */
 .slogan {
   background: skyblue;
   height: 10vh;
   clear: both;
 }
+
 /* 푸터 */
 .footer {
   background: #ccc
