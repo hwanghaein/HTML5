@@ -561,16 +561,15 @@ line-height: 1.5;
   font-size: 12px; 
 }
 
+
 /* "공지사항+자료실+내용리스트+더보기" 전부 영역 */
 .board{
-  background-color: yellow;
   margin-top: 20px;
   position: relative;
 }
 
-/* 공지사항탭+자료실탭  */
+/* 공지사항탭+자료실탭 가로로 길게 더보기까지 영역  */
 .tab-list{
-  background-color: lime;
   display: flex;
   flex-flow: row nowrap;
   }
@@ -592,9 +591,8 @@ line-height: 1.5;
   }
 
 
-  /* 내용리스트들+시간 다 합친 박스영역 */
+  /* 탭 선택하면 나오는 것들 (공지사항/자료실 내용리스트 박스 2개) */
 .tab-panel{
-  background-color: pink;
   display: none;
  margin-top: 15px;
 }
@@ -607,7 +605,6 @@ line-height: 1.5;
 
 /* 밑에 각각 리스트들 (내용+시간)*/
 .board-list li{
-background-color: slateblue;
 margin-top: 10px;
 display: flex;
 flex-flow: row nowrap;
@@ -616,7 +613,6 @@ justify-content: space-between;
 
 /* 밑에 각각 리스트들의 a태그 (선택되는 부분) */
 .board-list a{
-  background-color: salmon;
   flex-grow: 1;
   white-space: nowrap;
   overflow: hidden;
@@ -631,7 +627,6 @@ margin-left: 10px;
 
 /* (공지사항+자료실) 더보기 */
 .board-more {
-background-color: violet;
 position: absolute;
 top: -8px;
 right: -8px;
