@@ -663,13 +663,11 @@ padding: 8px;
 
 /* 새소식 밑에 영역 (썸네일+내용) 전부 하이퍼링크 처리 */
 .news-link {
-  /* background-color: pink; */
   display:block;
 }
 
 /* 새소식 밑에 영역 (썸네일+내용) 전부 */
 .news-item{
-  /* background-color: skyblue; */
   margin-top: 35px;
   padding-left: 130px;
   position: relative;
@@ -677,13 +675,11 @@ padding: 8px;
 
 /* 새소식의 소제목 ("W3C 사이트가 리뉴얼 되었습니다") */
 .news-item-title{
-  /* background-color: orange; */
   font-weight: 500;
 }
 
 /* 날짜 */
 .news-item-date{
-/* background-color: lawngreen; */
 display: block;
 margin: 5px 0 10px;
 }
@@ -740,18 +736,15 @@ padding: 8px;
 /* 신규이벤트 전체 섹션  */
 .event{
   border-bottom: 1px solid #aaa;
-  /* background-color: yellow; */
 }
 
 /* “신규이벤트” 글자 부분 */
 .event-title{
-  /* background-color: lime; */
   display: inline-block;
 }
 
 /* 2개의 버튼 (이전이벤트보기, 다음이벤트보기)을 묶음 */
 .event-button-wrapper{
-  /* background-color: yellow; */
   height: 20px;
   overflow: hidden;
   display: flex; 
@@ -794,19 +787,14 @@ margin: 10px 0;
 
 /* 내용설명 부분*/
 .event-brief{
-  /* background-color: pink; */
   line-height: 1.5;
 }
 
 /* 관련사이트 영역 전체 */
 .related{
-  /* background-color: aqua; */
   margin-top: 10px;
 }
 
-.related-title{
-  /* background-color: greenyellow; */
-}
 
 /* 관련사이트 밑에 펼쳐지는 흰색영역 */
 .related-list{
@@ -821,7 +809,6 @@ margin: 10px 0;
 
 /* 하위 리스트들 전체  */
 .related-list li{
-  /* background-color: #ff0; */
   height: 25px;
   display: flex;
   flex-flow: row nowrap;
@@ -831,20 +818,16 @@ margin: 10px 0;
 
 /* 각각의 개별 리스트  */
 .related-list a{
-  /* background-color: pink; */
   flex-grow: 1;
   padding: 0 10px;
 }
 
 /* 마우스 대서 길어지고 난 후의 부분 */
 .related-list:hover, .related-list:focus{
-  background-color: aquamarine;
   height: 147px;
   padding-top: 10px;
   padding-bottom: 10px;
 }
-
-
 
 
 /* 슬로건 */
