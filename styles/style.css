@@ -1,7 +1,7 @@
 @import url(./fontello.css);
 @import url(./normalize.css);
 @import url(./reset.css);
-
+/* @import url(./module.css); */
 
 /* 숨김 콘텐츠 */
 .a11y-hidden, legend {
@@ -637,10 +637,219 @@ padding: 8px;
   color: darkgreen;
 }
 
+/* 새소식 전체 섹션 */
+.news{
+  margin-top: 20px;
+  position:relative;
+}
+
+/* 새소식 글자 밑에 회색줄*/
+.news::before{
+  content:"";
+  position: absolute;
+  top: 35px;
+  left: 0;
+  width: 80%;
+  height: 1px;
+  background: #aaa linear-gradient(to right, #ccc, #fff);
+}
+
+/* "새소식" 글자 타이틀 부분 */
+.news-title{
+ color:#e85e2c;
+ font-size: 15px;
+ font-weight: 700;
+}
+
+/* 새소식 밑에 영역 (썸네일+내용) 전부 하이퍼링크 처리 */
+.news-link {
+  /* background-color: pink; */
+  display:block;
+}
+
+/* 새소식 밑에 영역 (썸네일+내용) 전부 */
+.news-item{
+  /* background-color: skyblue; */
+  margin-top: 35px;
+  padding-left: 130px;
+  position: relative;
+}
+
+/* 새소식의 소제목 ("W3C 사이트가 리뉴얼 되었습니다") */
+.news-item-title{
+  /* background-color: orange; */
+  font-weight: 500;
+}
+
+/* 날짜 */
+.news-item-date{
+/* background-color: lawngreen; */
+display: block;
+margin: 5px 0 10px;
+}
+
+/* 본문내용 */
+.news-item-brief{
+line-height: 1.5;
+}
+
+/* 썸네일이미지+ "WCW리뉴얼" 합친 부분 */
+.news-item-thumbnail{
+  /* background-color: gold; */
+  position: absolute;
+  top:2px;
+  left:0;
+  text-align: center;
+}
+
+/* news-item-thumbnail 클래스 안에 있는 썸네일 img */
+.news-item-thumbnail img{
+  box-shadow: 0 15px 10px 5px #ccc;
+  margin-bottom: 15px;
+}
+
+/* 더보기 부분 */
+.news-more{
+position: absolute;
+top: -8px;
+right: -8px;
+padding: 8px;
+}
+
+
+/* 회색 그라디언트 class */
+.gradient-effect{
+  background: #ccc linear-gradient(to bottom, #ccc, #eee);
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+/* 오렌지 강조색 class */
+.accent-color{
+  color:#e85e2c
+}
+
+/* 텍스트 사이즈,굵기 class */
+.text-xl{
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+
+/* 신규이벤트 전체 섹션  */
+.event{
+  border-bottom: 1px solid #aaa;
+  /* background-color: yellow; */
+}
+
+/* “신규이벤트” 글자 부분 */
+.event-title{
+  /* background-color: lime; */
+  display: inline-block;
+}
+
+/* 2개의 버튼 (이전이벤트보기, 다음이벤트보기)을 묶음 */
+.event-button-wrapper{
+  /* background-color: yellow; */
+  height: 20px;
+  overflow: hidden;
+  display: flex; 
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 5px;
+  float: right;
+}
+
+/* 버튼이미지*/
+.event-button{
+  /* background-color: blue; */
+  width: 19px;
+  height: 18px;
+  border: 0;
+  padding: 18px 0 0 0;
+  background: url(./images/back_forward.png) no-repeat;
+}
+
+/* "다음 이벤트 보기" 버튼 */
+.event-button-next{
+  background-position: -36px 0;
+}
+  
+/*Tab키 눌렀을때 아웃라인 잘보이게*/
+.event-button:focus{
+  outline-offset: -2px;
+}
+
+/*썸네일, 내용설명 위아래 여백*/
+.event-thumbnail, .event-brief{
+margin: 10px 0;
+}
+
+/* 썸네일이미지 */
+.event-thumbnail img{
+  border:1px solid #aaa;
+  box-shadow: 5px 5px 0 0 #ccc;
+}
+
+/* 내용설명 부분*/
+.event-brief{
+  /* background-color: pink; */
+  line-height: 1.5;
+}
+
+/* 관련사이트 영역 전체 */
+.related{
+  /* background-color: aqua; */
+  margin-top: 10px;
+}
+
+.related-title{
+  /* background-color: greenyellow; */
+}
+
+/* 관련사이트 밑에 펼쳐지는 흰색영역 */
+.related-list{
+  background-color: #fff;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  margin-top: 10px;
+  height: 27px;
+  overflow: hidden;
+  transition: height 400ms 0ms, padding 400ms 400ms;
+}
+
+/* 하위 리스트들 전체  */
+.related-list li{
+  /* background-color: #ff0; */
+  height: 25px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding: 0 5px;
+}
+
+/* 각각의 개별 리스트  */
+.related-list a{
+  /* background-color: pink; */
+  flex-grow: 1;
+  padding: 0 10px;
+}
+
+/* 마우스 대서 길어지고 난 후의 부분 */
+.related-list:hover, .related-list:focus{
+  background-color: aquamarine;
+  height: 147px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+
+
 
 /* 슬로건 */
 .slogan {
-  background: skyblue;
+  background: rgb(153, 159, 161);
   height: 10vh;
   clear: both;
 }
